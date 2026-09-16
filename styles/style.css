@@ -57,6 +57,7 @@ ol {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
+
 .content {
   display: flex;
   flex-direction: row;  
@@ -338,12 +339,3 @@ button {
   padding: 0px 3px;
 }
 
-
-
-font-family: Fira Sans Condensed;
-font-weight: 400;
-font-style: Regular;
-font-size: 18px;
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
