@@ -16,6 +16,11 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  min-height: 100vh;  
 }
 
 h1,
@@ -52,14 +57,6 @@ ol {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
-
-.page {
-  display: flex;
-  justify-content: center; 
-  align-items: center;     
-  min-height: 100vh;      
-}
-
 .content {
   display: flex;
   flex-direction: row;  
@@ -82,6 +79,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  position: relative;
 }
 
 .content__details {
@@ -89,14 +87,11 @@ ol {
   max-height: 100%;
 }
 
-.content__details .title {
-  padding: 0px 140px 26px 0px;
-}
-
 .result__video-container {
   min-width: 711px;
   min-height: 386px;
   margin-bottom: 16px;
+  position:relative;
 }
 
 .result__video-container video {
@@ -124,16 +119,11 @@ ol {
   max-height: 103px;             
   max-width: 50%;
   }
-.content__video-card-description-container {
-flex-grow: 1;
 
-}
 
 .search-form__fieldset-title {
-font-family: Fira Sans Condensed, Arial, sans-serif;
-font-style: Regular;
+font-family: 'Fira Sans Condensed', Arial, sans-serif;
 font-size: 18px;
-line-height: 100%;
 font-weight: 400;
 padding-bottom: 5px;
 }
@@ -141,11 +131,12 @@ padding-bottom: 5px;
 .title {
   font-family: Oswald;
   font-weight: 700;
-  font-style: Bold;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
+  padding: 0 140px 20px 0;
 }
+
 .content__accent {
   color: #545050
 }
@@ -169,20 +160,16 @@ padding-bottom: 5px;
   padding: 5px;
 }
   
-
-
 .content__video-card-description {
-
-font-family: Fira Sans Condensed, Arial, sans-serif;
+font-family: 'Fira Sans Condensed', Arial, sans-serif;
 font-weight: 400;
-font-style: Regular;
 font-size: 18px;
 line-height: 16.2px;
 overflow: hidden;   
 display: -webkit-box;
 -webkit-box-orient: vertical;
 -webkit-line-clamp: 4;           
-overflow: hidden;    
+flex-grow: 1;
 }
 
 .visually-hidden {
@@ -195,15 +182,6 @@ overflow: hidden;
   white-space: nowrap;
 }
 
-.search-form__fieldset-title {
-font-family: Fira Sans Condensed, Arial, sans-serif;
-font-weight: 400;
-font-style: Regular;
-font-size: 18px;
-line-height: 100%;
-letter-spacing: 0%;
-
-}
 
 .search-form__checkbox-list {
   display: flex;
@@ -227,23 +205,20 @@ letter-spacing: 0%;
   border: 1px solid #fff;
   border-left: none;
   border-right: none;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-weight: 400;
-  font-style: Regular;
   font-size: 18px;
   opacity: 70%;
   background-color:#1B1919;
   color: #fff;
-  width: 225px;   /* а как еще не понятно, иначе оно узкое получается*/
+  width: 225px;   /* а как еще не понятно, иначе оно не растягивается до нужного размера*/
 }
 
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 0.7);
   font-family: Fira Sans Condensed, Arial, sans-serif;
   font-weight: 400;
-  font-style: Regular;
   font-size: 18px;
-  line-height: 100%;
 }
 
 
@@ -293,15 +268,14 @@ letter-spacing: 0%;
   outline: 3px solid rgb(19, 133, 85); 
 }
 .search-form__checkbox:focus + .search-form__pseudo-checkbox {     /* факультативно  */
-  outline: 2px solid #5199FF;        
+  outline: 2px solid #5199FF;       
 }
 
 
 button {
   background-color: transparent;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-weight: 700;
-  font-style: Bold;
   font-size: 18px;
   line-height: 100%;
   color: #FFF;
@@ -332,10 +306,9 @@ button {
 .search-form__submit-button:focus {
   outline: none;
 }
-.search-form__submit-button:focus-visible {
-  border: none;
-}
+
 .search-form__submit-button:focus-visible {  /* факультативно  */
+  
   outline: 1px double #fff;
 }
 .content__card-link {
@@ -365,10 +338,12 @@ button {
   padding: 0px 3px;
 }
 
-.result__video-container {
-position:relative;     
-}
 
-.content__list-container {
-position: relative;
-}
+
+font-family: Fira Sans Condensed;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
