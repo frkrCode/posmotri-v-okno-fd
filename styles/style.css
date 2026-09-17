@@ -40,10 +40,6 @@ ul,
 ol {
   list-style: none;
 }
-
-
-
-
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
@@ -61,7 +57,7 @@ ol {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  gap: 26px;
+  gap: 30px;
 }
 
 .search-form {
@@ -83,28 +79,36 @@ ol {
 }
 
 .content__details {
-  max-width: 100%;
+  max-width: 399px;
   max-height: 100%;
 }
 
 .result__video-container {
-  min-width: 711px;
-  min-height: 386px;
-  margin-bottom: 16px;
+  width: 100%;
+  max-height: 100%;
+  padding-bottom: 10px;
   position:relative;
 }
 
+.content__video-card-description-container { 
+  width: 196px;
+  height: 103px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 6px;
+}
+
 .result__video-container video {
-  width: 100%;
-  height: 100%;
   object-fit: fill;
+  min-width: 711px;
+  max-height: 386px;
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  
 }
 
 .content__video-card {
@@ -117,15 +121,15 @@ ol {
 .content__video-card-thumbnail {
   object-fit: contain;
   object-position: right;
-  max-height: 103px;
-  max-width: 50%;
+  height: 103px;
+  min-width: 194px;    /* вопросы могут быть только к этому, но тут я вроде все перепробывал.*/
 }
 
 .search-form__fieldset-title {
-font-family: 'Fira Sans Condensed', Arial, sans-serif;
-font-size: 18px;
-font-weight: 400;
-padding-bottom: 5px;
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 5px;
 }
 
 .title {
@@ -134,7 +138,7 @@ padding-bottom: 5px;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
-  padding: 0 140px 20px 0;
+  padding: 0 140px 26px 0;
 }
 
 .content__accent {
@@ -158,19 +162,18 @@ padding-bottom: 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 5px;
 }
   
 .content__video-card-description {
-font-family: 'Fira Sans Condensed', Arial, sans-serif;
-font-weight: 400;
-font-size: 18px;
-line-height: 16.2px;
-overflow: hidden;
-display: -webkit-box;
--webkit-box-orient: vertical;
--webkit-line-clamp: 4;
-flex-grow: 1;
+  font-family: 'Fira Sans Condensed', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  flex-grow: 1;
 }
 
 .visually-hidden {
@@ -183,11 +186,9 @@ flex-grow: 1;
   white-space: nowrap;
 }
 
-
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
-  
 }
 .search-form__fieldset {
   border: none;
@@ -221,15 +222,13 @@ flex-grow: 1;
   font-size: 18px;
 }
 
-
 .search-form__label input:focus {          /* факультативно */
   outline: none;
 }
 
 .search-form__label:has(:focus-visible) {   /* факультативно цвет и толщина не по макету */
- outline: 1px solid #FFF;
+  outline: 1px solid #FFF;
 }
-
 
 .search-form__pseudo-checkbox {
   width: 19px;
@@ -260,15 +259,12 @@ flex-grow: 1;
   text-decoration: underline;                                            /* выучить запомнить важно  https://sec-storage.org/3bb8877f5e!*/
 }
 
-
-
 .search-form__label:has(.search-form__checkbox:focus-visible) {    /* факультативно цвет и толщина не по макету */
   outline: 1px solid #FFF;
 }
 .search-form__checkbox:focus + .search-form__pseudo-checkbox {     /* факультативно  */
   outline: 2px solid #5199FF;
 }
-
 
 .button {
   background-color: transparent;
@@ -283,13 +279,11 @@ flex-grow: 1;
   width: 194px;
   min-height: 34px;
   align-self: self-end;
-  
 }
 
 .more-button {
   min-height: 34px;
   width: 100%;
-  
 }
 
 .button:hover {
@@ -312,6 +306,7 @@ flex-grow: 1;
 .content__card-link:active {
   background-color: #545050;
 }
+
 .content__card-link_current {
   background-color: #545050;  /*какой цвет??*/
 }
@@ -324,9 +319,11 @@ flex-grow: 1;
 .content__card-link:focus {
   outline: none;
 }
+
 .content__card-link:focus-visible {
   outline: 1px solid #FFF;
 }
+
 .content__list-item {
   width: 100%;
   padding: 0px 3px;
