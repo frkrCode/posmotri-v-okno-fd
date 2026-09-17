@@ -113,7 +113,7 @@ ol {
 
 .content__video-card {
   display: flex;
-  width: 100%;
+  width: 50vw;
   justify-content: space-between;
   align-items: self-start;
 }
@@ -122,7 +122,7 @@ ol {
   object-fit: contain;
   object-position: right;
   height: 103px;
-  min-width: 194px;    /* вопросы могут быть только к этому, но тут я вроде все перепробывал.*/
+  min-width: 194px;  
 }
 
 .search-form__fieldset-title {
