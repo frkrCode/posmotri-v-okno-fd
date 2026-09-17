@@ -113,7 +113,7 @@ ol {
 
 .content__video-card {
   display: flex;
-  width: 50vw;
+  width: 100%;   /*  Анна спасибо вам, в данном случае получается чють-чють не по макету, но ей богу не понимаю как растянуть изображение до нужного, а очень хочется*/
   justify-content: space-between;
   align-items: self-start;
 }
@@ -329,4 +329,3 @@ ol {
   width: 100%;
   padding: 0px 3px;
 }
-
