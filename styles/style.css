@@ -122,7 +122,7 @@ ol {
   object-fit: contain;
   object-position: right;
   height: 103px;
-  min-width: 194px;  
+  min-width: 194px;
 }
 
 .search-form__fieldset-title {
@@ -199,7 +199,7 @@ ol {
   flex-direction: row;
   align-items: center;
   width: fit-content;
-  gap: 5px;                 /*>???????<*/
+  gap: 5px;          
 }
 
 .search-form__textfield {
@@ -262,6 +262,7 @@ ol {
 .search-form__label:has(.search-form__checkbox:focus-visible) {    /* факультативно цвет и толщина не по макету */
   outline: 1px solid #FFF;
 }
+
 .search-form__checkbox:focus + .search-form__pseudo-checkbox {     /* факультативно  */
   outline: 2px solid #5199FF;
 }
